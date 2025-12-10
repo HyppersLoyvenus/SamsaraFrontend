@@ -1,83 +1,49 @@
-# Sistema de Gerenciamento Escolar Infantil
+# Gerenciamento Escolar Infantil
 
-Sistema web para gerenciamento de escola infantil desenvolvido como trabalho acadêmico da UniFAAT-ADS.
+O sistema tem como objetivo principal automatizar e otimizar o controle de pagamentos, presenças e atividades dos alunos, substituindo o método manual atual baseado em cadernos.
 
-## Tecnologias
+## Objetivos Desta Etapa 
 
-**Backend:**
-- Node.js + Express
-- PostgreSQL
-- Socket.IO (WebSocket)
-- EJS (Views)
-- Docker
+Dar continuidade ao projeto do semestre passando, realizando a criação do front-end em React + TypeScript consumindo as API REST desenvolvidas anteriormente.
 
-**Frontend:**
-- React 18 + TypeScript
-- Vite
-- React Router
-- Axios
-- Socket.IO Client
-
-## Como Executar
-
-### Com Docker:
-`ash
-docker-compose up --build
-`
-
-### Sem Docker:
-
-**Backend:**
-`ash
-cd APP
-npm install
-npm start
-`
-
-**Frontend:**
-`ash
-cd FRONTEND
-npm install
-npm run dev
-`
-
-## Acessar
-
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:3000/api
-- Views EJS: http://localhost:3000/view/alunos
-
-## Funcionalidades
-
-- CRUD de Alunos
-- CRUD de Professores
-- Atualização em tempo real (WebSocket)
-- Views server-side com EJS
-
-## Estrutura do Projeto
-
-`
-APP/              # Backend Node.js
- config/       # Configuração do banco
- controllers/  # Lógica de negócio
- models/       # Models Sequelize
- routes/       # Rotas da API
- views/        # Templates EJS
-
-FRONTEND/         # Frontend React
- src/
-    hooks/    # Custom hooks (useWebSocket)
-    pages/    # Páginas (Alunos, Professores)
-    services/ # API (axios)
-    types/    # Tipos TypeScript
- vite.config.ts
-`
-
-## Grupo
-
-- 3124596 – Antuane Felipe
-- 6324589 — Gabrielle Palma
-- 6324304 — Karolina Mendes
-- 6324549 — Vitória Santos Nascimento
+Membros:
+- Antuane Felipe - RA: 3124596
+- Gabrielle Palma - RA: 6324589
+- Karolina Mendes - RA: 6324304
+- Vitória Nascimento - RA: 6324549
 
 ---
+
+## Sumário
+
+1. [Instalação & Execução](#instalacao-execucao)
+2. [Pré-Compilador Vite](#compilador-vite)
+
+## Instalação & Execução <a name="instalacao-execucao"></a>
+
+1. Clonar o repositório & acessa-lo:
+    
+    ```sh
+    git clone https://github.com/HyppersLoyvenus/SamsaraFrontend.git
+    cd SamsaraFrontend
+    ```
+
+2. Subir a aplicação com Docker Compose:
+
+   ```sh
+   docker-compose up --build -d
+   ```
+
+- URLs:
+  - **Frontend React:** http://localhost:5173
+  - **Backend API:** http://localhost:3000/api
+  - **View EJS Alunos:** http://localhost:3000/view/alunos
+  - **View EJS Professores:** http://localhost:3000/view/professores
+
+## Pré-Compilador Vite <a name="compilador-vite"></a>
+
+```bash
+cd FRONTEND
+npm run build    # Gera build otimizado na pasta dist/
+npm run preview  # Preview do build de produção
+```
